@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worfe Hack</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>DOGUM TARİHİNDEN BURC SORGU</title>
+  <script>
+    function burcCikar() {
+      // Doğum tarihi
+      var dogumTarihi = new Date(document.getElementById('dogumTarihi').value);
+      
+      // Ay ve gün bilgisini al
+      var ay = dogumTarihi.getMonth() + 1; // JavaScript'te aylar 0'dan başlar, bu yüzden +1 ekliyoruz
+      var gun = dogumTarihi.getDate();
+      
+      // Burçları kontrol et
+      var burc = "";
+      if ((ay == 3 && gun >= 21) || (ay == 4 && gun <= 19)) {
+        burc = "Koç";
+      } else if ((ay == 4 && gun >= 20) || (ay == 5 && gun <= 20)) {
+        burc = "Boğa";
+      } else if ((ay == 5 && gun >= 21) || (ay == 6 && gun <= 20)) {
+        burc = "İkizler";
+      } else if ((ay == 6 && gun >= 21) || (ay == 7 && gun <= 22)) {
+        burc = "Yengeç";
+      } else if ((ay == 7 && gun >= 23) || (ay == 8 && gun <= 22)) {
+        burc = "Aslan";
+      } else if ((ay == 8 && gun >= 23) || (ay == 9 && gun <= 22)) {
+        burc = "Başak";
+      } else if ((ay == 9 && gun >= 23) || (ay == 10 && gun <= 22)) {
+        burc = "Terazi";
+      } else if ((ay == 10 && gun >= 23) || (ay == 11 && gun <= 21)) {
+        burc = "Akrep";
+      } else if ((ay == 11 && gun >= 22) || (ay == 12 && gun <= 21)) {
+        burc = "Yay";
+      } else if ((ay == 12 && gun >= 22) || (ay == 1 && gun <= 19)) {
+        burc = "Oğlak";
+      } else if ((ay == 1 && gun >= 20) || (ay == 2 && gun <= 18)) {
+        burc = "Kova";
+      } else {
+        burc = "Balık";
+      }
+      
+      // Sonucu ekrana yazdır
+      document.getElementById('sonuc').innerHTML = "Burcunuz: " + burc;
+    }
+  </script>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <h1>Efe Köse</h1>
+  <h2>Burç Sorgu</h2>
+  
+  <label for="dogumTarihi">Doğum Tarihi:</label>
+  <input type="date" id="dogumTarihi">
+  
+  <button onclick="burcCikar()">Çıkar</button>
+  
+  <p id="sonuc"></p>
+  <div class="card text-bg-dark">
+    <img src="babaringo.png" class="card-img" alt="...">
+    <div class="card-img-overlay">
+      <h5 class="card-title">Bizimle İletişime Geç</h5>
+      <div class="btn-group">
+        <a href="https://www.instagram.com/2fe.kk?igsh=MzNlNGNkZWQ4Mg==" class="btn btn-primary active" aria-current="page">İnstagram</a>
+        <a href="https://discord.gg/WorfeHack" class="btn btn-primary">Discord</a>
+        <a href="https://t.me/WorfeHack1" class="btn btn-primary">Telegram</a>
+      </div>
+      <p class="card-text"><small>Daha fazlasi için Discord Ve Telegram kanallarimiza gelin</small></p>
+    </div>
+  </div>
+</body>
+</html>
